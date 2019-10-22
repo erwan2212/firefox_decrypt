@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\FPC\3.0.0\bin\i386-win32\fpc.exe" Date="1198548637"/>
+  <Params Value=" -Twin32 -Pi386 -MDelphi -Scghi -O1 -g -gl -l -vewnhibq &quot;-FiC:\Users\erwan\Documents\-= SOURCES =-\delphi\network\firefox_decrypt\lib\i386-win32&quot; &quot;-FuC:\Users\erwan\Documents\-= SOURCES =-\delphi\databases\sqllite3&quot; &quot;-FuC:\Users\erwan\Documents\-= SOURCES =-\delphi\system\ikjson&quot; -FuC:\Users\erwan\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\Core -FuC:\Users\erwan\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\Protocols -FuC:\Users\erwan\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\System &quot;-FuC:\Users\erwan\Documents\-= SOURCES =-\delphi\network\firefox_decrypt\&quot; &quot;-FUC:\Users\erwan\Documents\-= SOURCES =-\delphi\network\firefox_decrypt\lib\i386-win32\&quot; -offdecrypt-win32.exe ffdecrypt.dpr"/>
+  <Complete Value="False"/>
+</CONFIG>
