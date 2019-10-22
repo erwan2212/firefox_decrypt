@@ -1,4 +1,6 @@
 *.exe
+*.dll
 *.bak
 *.~*
 lib
+backup
