@@ -110,14 +110,14 @@ if nativeuint(@NSSBase64_DecodeBuffer) <>0
    //writeln(length(value));
    lenp:=0;
 
-   {
+   {$ifndef fpc}
    //using legacy ATOB_AsciiToData //to eventually keep compatibility with good ol' delphi7
    p:=ATOB_AsciiToData(pchar(value),lenp);
    EncryptedSECItem.SECItemData :=p;
    EncryptedSECItem.SECItemLen :=lenp;
    if EncryptedSECItem.SECItemData=nil then writeln('EncryptedSECItem.SECItemData=nil');
    //writeln(strpas(EncryptedSECItem.SECItemData)+' - '+inttostr(lenp));
-   }
+   {$endif}
 
    {
    //using indy10 base64decode
@@ -126,6 +126,7 @@ if nativeuint(@NSSBase64_DecodeBuffer) <>0
    EncryptedSECItem.SECItemLen :=lenp; //(length(value) div 4 * 3) - 1;
    }
 
+   {$ifdef fpc}
    //or using FPC base64
    output:=DecodeStringBase64(value);
    EncryptedSECItem.SECItemData :=pchar(@output[1]);
@@ -136,6 +137,7 @@ if nativeuint(@NSSBase64_DecodeBuffer) <>0
    //copymemory(EncryptedSECItem.SECItemData,@bytes[0],lenp);
    if EncryptedSECItem.SECItemData=nil then writeln('EncryptedSECItem.SECItemData=nil');
    //writeln(strpas(EncryptedSECItem.SECItemData)+' - '+inttostr(EncryptedSECItem.SECItemLen));
+   {$endif}
 
    end;
 
